@@ -21,6 +21,9 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
+
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../Frontend/dist")));
 
@@ -28,10 +31,6 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
     });
 }
-
-app.use("/api/auth", authRoutes);
-app.use("/api/messages", messageRoutes);
-
 
 const PORT = process.env.PORT;
 server.listen(PORT, () => {
