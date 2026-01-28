@@ -211,9 +211,3 @@ The application is deployed on Render with the following configuration:
 ## Disclaimer
 
 This project is developed for educational and portfolio demonstration purposes. Additional security hardening, load testing, and infrastructure optimization are recommended before production use at scale.
-
----
-
-## License
-
-MIT License - feel free to use this project for learning and development.
